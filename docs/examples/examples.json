@@ -1,4 +1,7 @@
 [{
+  "key": "five-days-week",
+  "label": "Five days week"
+}, {
   "key": "kitchen-sink",
   "label": "Kitchen sink"
 }, {

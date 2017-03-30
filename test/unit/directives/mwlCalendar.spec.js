@@ -28,6 +28,7 @@ describe('mwlCalendar directive', function() {
       'day-view-start="06:00" ' +
       'day-view-end="22:59" ' +
       'day-view-split="30" ' +
+      'week-view-days="vm.weekViewDays" ' +
       'cell-modifier="vm.modifyCell(calendarCell)"> ' +
     '</mwl-calendar>';
   var calendarDay = new Date(2015, 4, 1);
@@ -36,6 +37,7 @@ describe('mwlCalendar directive', function() {
     //These variables MUST be set as a minimum for the calendar to work
     vm.calendarView = 'month';
     vm.calendarDay = calendarDay;
+    vm.weekViewDays = 7;
     vm.events = [
       {
         title: 'An event',
@@ -131,6 +133,51 @@ describe('mwlCalendar directive', function() {
     expect(spy).to.have.been.calledWith('calendar.refreshView');
     scope.vm.events[0].title = 'hello event 01';
     scope.$apply();
+  });
+
+  describe('semi weeks', function() {
+
+    it('should refresh the calendar when moving short semi weeks (weekViewDays)', function() {
+      var spy = sinon.spy(directiveScope, '$broadcast');
+      scope.vm.calendarDay = new Date(2017, 3, 15);
+      scope.vm.weekViewDays = 5;
+      scope.$apply();
+      $timeout.flush();
+      spy.reset();
+
+      // start of weeks are the same, but start of 5 semi weeks are not
+      scope.vm.calendarDay = new Date(2017, 3, 22);
+      scope.$apply();
+      $timeout.flush();
+      expect(spy).to.have.been.calledWith('calendar.refreshView');
+    });
+
+    it('should not refresh the calendar when weekViewDays are not changed', function() {
+      var spy = sinon.spy(directiveScope, '$broadcast');
+      scope.vm.weekViewDays = 3;
+      scope.$apply();
+      $timeout.flush();
+      expect(spy).to.have.been.calledWith('calendar.refreshView');
+      spy.reset();
+
+      scope.vm.weekViewDays = 3;
+      scope.$apply();
+      expect(spy).not.to.have.been.calledWith('calendar.refreshView');
+    });
+
+    it('should refresh the calendar when weekViewDays changed', function() {
+      var spy = sinon.spy(directiveScope, '$broadcast');
+      scope.vm.weekViewDays = 4;
+      scope.$apply();
+      $timeout.flush();
+      spy.reset();
+
+      scope.vm.weekViewDays = 5;
+      scope.$apply();
+      $timeout.flush();
+      expect(spy).to.have.been.calledWith('calendar.refreshView');
+    });
+
   });
 
   it('should allow a new event reference to be set', function() {

@@ -38,6 +38,7 @@ angular
       }
 
       vm.events = vm.events || [];
+      vm.weekViewDays = vm.weekViewDays || 7;
 
       var previousDate = moment(vm.viewDate);
       var previousView = vm.view;
@@ -73,10 +74,11 @@ angular
         //if on-timespan-click="calendarDay = calendarDate" is set then don't update the view as nothing needs to change
         var currentDate = moment(vm.viewDate);
         var shouldUpdate = true;
-        if (
-          previousDate.clone().startOf(vm.view).isSame(currentDate.clone().startOf(vm.view)) &&
-          !previousDate.isSame(currentDate) &&
-          vm.view === previousView
+        if (!previousDate.isSame(currentDate) && vm.view === previousView &&
+             ((vm.view !== 'week' || vm.view !== 'weeks') && previousDate.clone().startOf(vm.view).isSame(currentDate.clone().startOf(vm.view)) &&
+              (vm.view === 'week' || vm.view === 'weeks') &&
+              calendarHelper.getStartOfWeek(previousDate.clone(), vm.weekViewDays).isSame(calendarHelper.getStartOfWeek(currentDate.clone(), vm.weekViewDays))
+             )
         ) {
           shouldUpdate = false;
         }
@@ -101,6 +103,7 @@ angular
           'vm.viewDate',
           'vm.view',
           'vm.cellIsOpen',
+          'vm.weekViewDays',
           function() {
             return moment.locale() + $locale.id; //Auto update the calendar when the locale changes
           }
@@ -151,6 +154,7 @@ angular
         dayViewEventChunkSize: '@',
         dayViewEventWidth: '@',
         templateScope: '=?',
+        weekViewDays: '=?',
         dayViewTimePosition: '@'
       },
       controller: 'MwlCalendarCtrl as vm',

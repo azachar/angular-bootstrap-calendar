@@ -12,9 +12,17 @@ angular
       if (angular.isDefined($attrs.setToToday)) {
         vm.date = new Date();
       } else if (angular.isDefined($attrs.increment)) {
-        vm.date = moment(vm.date).add(1, vm.increment).toDate();
+        if ((vm.increment === 'weeks' || vm.increment === 'week') && angular.isDefined($attrs.weekViewDays)) {
+          vm.date = moment(vm.date).add(vm.weekViewDays, 'days').toDate();
+        } else {
+          vm.date = moment(vm.date).add(1, vm.increment).toDate();
+        }
       } else if (angular.isDefined($attrs.decrement)) {
-        vm.date = moment(vm.date).subtract(1, vm.decrement).toDate();
+        if ((vm.decrement === 'weeks' || vm.decrement === 'week') && angular.isDefined($attrs.weekViewDays)) {
+          vm.date = moment(vm.date).subtract(vm.weekViewDays, 'days').toDate();
+        } else {
+          vm.date = moment(vm.date).subtract(1, vm.decrement).toDate();
+        }
       }
       $scope.$apply();
     }
@@ -34,7 +42,8 @@ angular
       scope: {
         date: '=',
         increment: '=',
-        decrement: '='
+        decrement: '=',
+        weekViewDays: '=?'
       },
       bindToController: true
     };

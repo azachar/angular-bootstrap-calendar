@@ -177,11 +177,24 @@ angular
 
     }
 
-    function getWeekView(events, viewDate) {
+    function getStartOfWeek(viewDate, weekViewDays) {
+      if (weekViewDays === 7) {
+        return moment(viewDate).startOf('week');
+      }
+      var modulus = moment(viewDate).dayOfYear() % weekViewDays;
+      return moment(viewDate).subtract(modulus, 'days').startOf('day');
+    }
 
+    function getWeekView(events, viewDate, weekViewDays) {
+      weekViewDays = weekViewDays || 7;
+      var startOfWeek = getStartOfWeek(viewDate, weekViewDays);
+      var endOfWeek = moment(startOfWeek).add(weekViewDays - 1, 'days').endOf('day');
+
+      var weekStartsOn = startOfWeek.day();
       var days = calendarUtils.getWeekViewHeader({
         viewDate: viewDate,
-        weekStartsOn: moment().startOf('week').day()
+        weekStartsOn: weekStartsOn,
+        weekViewDays: weekViewDays
       }).map(function(day) {
         day.date = moment(day.date);
         day.weekDayLabel = formatDate(day.date, calendarConfig.dateFormats.weekDay);
@@ -189,12 +202,10 @@ angular
         return day;
       });
 
-      var startOfWeek = moment(viewDate).startOf('week');
-      var endOfWeek = moment(viewDate).endOf('week');
-
       var eventRows = calendarUtils.getWeekView({
         viewDate: viewDate,
-        weekStartsOn: moment().startOf('week').day(),
+        weekStartsOn: weekStartsOn,
+        weekViewDays: weekViewDays,
         events: filterEventsInPeriod(events, startOfWeek, endOfWeek).map(function(event) {
 
           var weekViewStart = moment(startOfWeek).startOf('day');
@@ -267,8 +278,8 @@ angular
 
     }
 
-    function getWeekViewWithTimes(events, viewDate, dayViewStart, dayViewEnd, dayViewSplit) {
-      var weekView = getWeekView(events, viewDate);
+    function getWeekViewWithTimes(events, viewDate, dayViewStart, dayViewEnd, dayViewSplit, weekViewDays) {
+      var weekView = getWeekView(events, viewDate, weekViewDays);
       var newEvents = [];
       var flattenedEvents = [];
       weekView.eventRows.forEach(function(row) {
@@ -300,7 +311,7 @@ angular
                 start: event.startsAt,
                 end: event.endsAt
               },
-              startOfWeek: moment(viewDate).startOf('week').toDate()
+              startOfWeek: getStartOfWeek(viewDate, weekViewDays).toDate()
             })
           };
         })
@@ -327,6 +338,7 @@ angular
     }
 
     return {
+      getStartOfWeek: getStartOfWeek,
       getWeekDayNames: getWeekDayNames,
       getYearView: getYearView,
       getMonthView: getMonthView,

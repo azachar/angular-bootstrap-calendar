@@ -13,45 +13,45 @@
 		exports["angularBootstrapCalendarModuleName"] = factory(require("angular"), require("moment"), (function webpackLoadOptionalExternalModule() { try { return require("interactjs"); } catch(e) {} }()));
 	else
 		root["angularBootstrapCalendarModuleName"] = factory(root["angular"], root["moment"], root["interact"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_56__, __WEBPACK_EXTERNAL_MODULE_57__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_57__, __WEBPACK_EXTERNAL_MODULE_58__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
-
+/******/
 /******/ 		// Check if module is in cache
 /******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
-
+/******/
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
 /******/ 			l: false,
 /******/ 			exports: {}
 /******/ 		};
-
+/******/
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-
+/******/
 /******/ 		// Flag the module as loaded
 /******/ 		module.l = true;
-
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-
-
+/******/
+/******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
-
+/******/
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
-
+/******/
 /******/ 	// identity function for calling harmony imports with the correct context
 /******/ 	__webpack_require__.i = function(value) { return value; };
-
+/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -62,7 +62,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 			});
 /******/ 		}
 /******/ 	};
-
+/******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -71,15 +71,15 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 		__webpack_require__.d(getter, 'a', getter);
 /******/ 		return getter;
 /******/ 	};
-
+/******/
 /******/ 	// Object.prototype.hasOwnProperty.call
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-
+/******/
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
-
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 58);
+/******/ 	return __webpack_require__(__webpack_require__.s = 59);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -92,7 +92,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_0__;
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isDate = __webpack_require__(21)
+var isDate = __webpack_require__(22)
 
 var MILLISECONDS_IN_HOUR = 3600000
 var MILLISECONDS_IN_MINUTE = 60000
@@ -451,50 +451,50 @@ module.exports = startOfDay
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_date_fns_end_of_day__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_date_fns_end_of_day__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_date_fns_end_of_day___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_date_fns_end_of_day__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_date_fns_add_minutes__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_date_fns_add_minutes__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_date_fns_add_minutes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_date_fns_add_minutes__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_date_fns_difference_in_days__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_date_fns_difference_in_days__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_date_fns_difference_in_days___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_date_fns_difference_in_days__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_date_fns_start_of_day__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_date_fns_start_of_day___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_date_fns_start_of_day__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_date_fns_is_same_day__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_date_fns_is_same_day__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_date_fns_is_same_day___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_date_fns_is_same_day__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_date_fns_get_day__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_date_fns_get_day__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_date_fns_get_day___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_date_fns_get_day__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_date_fns_start_of_week__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_date_fns_start_of_week__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_date_fns_start_of_week___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_date_fns_start_of_week__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_date_fns_add_days__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_date_fns_add_days__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_date_fns_add_days___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_date_fns_add_days__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_date_fns_end_of_week__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_date_fns_end_of_week__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_date_fns_end_of_week___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_date_fns_end_of_week__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_date_fns_difference_in_seconds__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_date_fns_difference_in_seconds__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_date_fns_difference_in_seconds___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_date_fns_difference_in_seconds__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_date_fns_start_of_month__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_date_fns_start_of_month__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_date_fns_start_of_month___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_date_fns_start_of_month__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_date_fns_end_of_month__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_date_fns_end_of_month__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_date_fns_end_of_month___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_date_fns_end_of_month__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_date_fns_is_same_month__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_date_fns_is_same_month__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_date_fns_is_same_month___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_date_fns_is_same_month__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_date_fns_is_same_second__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_date_fns_is_same_second__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_date_fns_is_same_second___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_date_fns_is_same_second__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_date_fns_set_hours__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_date_fns_set_hours__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_date_fns_set_hours___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_date_fns_set_hours__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_date_fns_set_minutes__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_date_fns_set_minutes__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_date_fns_set_minutes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_date_fns_set_minutes__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_date_fns_start_of_minute__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_date_fns_start_of_minute__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_date_fns_start_of_minute___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16_date_fns_start_of_minute__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_date_fns_difference_in_minutes__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_date_fns_difference_in_minutes__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_date_fns_difference_in_minutes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17_date_fns_difference_in_minutes__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_date_fns_add_hours__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_date_fns_add_hours__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_date_fns_add_hours___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_18_date_fns_add_hours__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getWeekViewEventOffset", function() { return getWeekViewEventOffset; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getWeekViewHeader", function() { return getWeekViewHeader; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getWeekView", function() { return getWeekView; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMonthView", function() { return getMonthView; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDayView", function() { return getDayView; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDayViewHourGrid", function() { return getDayViewHourGrid; });
+/* harmony export (immutable) */ __webpack_exports__["getWeekViewEventOffset"] = getWeekViewEventOffset;
+/* harmony export (immutable) */ __webpack_exports__["getWeekViewHeader"] = getWeekViewHeader;
+/* harmony export (immutable) */ __webpack_exports__["getWeekView"] = getWeekView;
+/* harmony export (immutable) */ __webpack_exports__["getMonthView"] = getMonthView;
+/* harmony export (immutable) */ __webpack_exports__["getDayView"] = getDayView;
+/* harmony export (immutable) */ __webpack_exports__["getDayViewHourGrid"] = getDayViewHourGrid;
 
 
 
@@ -518,7 +518,8 @@ var WEEKEND_DAY_NUMBERS = [0, 6];
 var DAYS_IN_WEEK = 7;
 var HOURS_IN_DAY = 24;
 var MINUTES_IN_HOUR = 60;
-var getExcludedDays = function (startDate, days, excluded) {
+function getExcludedDays(_a) {
+    var startDate = _a.startDate, days = _a.days, excluded = _a.excluded;
     if (excluded.length < 1) {
         return 0;
     }
@@ -534,28 +535,29 @@ var getExcludedDays = function (startDate, days, excluded) {
         day++;
     }
     return reduce;
-};
-var getWeekViewEventSpan = function (event, offset, startOfWeek, excluded) {
+}
+function getWeekViewEventSpan(_a) {
+    var event = _a.event, offset = _a.offset, startOfWeek = _a.startOfWeek, excluded = _a.excluded, _b = _a.weekViewDays, weekViewDays = _b === void 0 ? DAYS_IN_WEEK : _b;
     var begin = event.start < startOfWeek ? startOfWeek : event.start;
     var span = 1;
     if (event.end) {
         span = __WEBPACK_IMPORTED_MODULE_2_date_fns_difference_in_days___default()(__WEBPACK_IMPORTED_MODULE_1_date_fns_add_minutes___default()(__WEBPACK_IMPORTED_MODULE_0_date_fns_end_of_day___default()(event.end), 1), __WEBPACK_IMPORTED_MODULE_3_date_fns_start_of_day___default()(begin));
     }
     var totalLength = offset + span;
-    if (totalLength > DAYS_IN_WEEK) {
-        span = DAYS_IN_WEEK - offset;
+    if (totalLength > weekViewDays) {
+        span = weekViewDays - offset;
     }
-    return span - getExcludedDays(begin, span, excluded);
-};
-var getWeekViewEventOffset = function (event, startOfWeek, excluded) {
-    if (excluded === void 0) { excluded = []; }
+    return span - getExcludedDays({ startDate: begin, days: span, excluded: excluded });
+}
+function getWeekViewEventOffset(_a) {
+    var event = _a.event, startOfWeek = _a.startOfWeek, _b = _a.excluded, excluded = _b === void 0 ? [] : _b;
     if (event.start < startOfWeek) {
         return 0;
     }
     var distance = __WEBPACK_IMPORTED_MODULE_2_date_fns_difference_in_days___default()(event.start, startOfWeek);
-    return distance - getExcludedDays(startOfWeek, distance, excluded);
-};
-var isEventIsPeriod = function (_a) {
+    return distance - getExcludedDays({ startDate: startOfWeek, days: distance, excluded: excluded });
+}
+function isEventIsPeriod(_a) {
     var event = _a.event, periodStart = _a.periodStart, periodEnd = _a.periodEnd;
     var eventStart = event.start;
     var eventEnd = event.end || event.start;
@@ -575,12 +577,12 @@ var isEventIsPeriod = function (_a) {
         return true;
     }
     return false;
-};
-var getEventsInPeriod = function (_a) {
+}
+function getEventsInPeriod(_a) {
     var events = _a.events, periodStart = _a.periodStart, periodEnd = _a.periodEnd;
     return events.filter(function (event) { return isEventIsPeriod({ event: event, periodStart: periodStart, periodEnd: periodEnd }); });
-};
-var getWeekDay = function (_a) {
+}
+function getWeekDay(_a) {
     var date = _a.date;
     var today = __WEBPACK_IMPORTED_MODULE_3_date_fns_start_of_day___default()(new Date());
     return {
@@ -590,9 +592,9 @@ var getWeekDay = function (_a) {
         isFuture: date > today,
         isWeekend: WEEKEND_DAY_NUMBERS.indexOf(__WEBPACK_IMPORTED_MODULE_5_date_fns_get_day___default()(date)) > -1
     };
-};
-var getWeekViewHeader = function (_a) {
-    var viewDate = _a.viewDate, weekStartsOn = _a.weekStartsOn, _b = _a.excluded, excluded = _b === void 0 ? [] : _b;
+}
+function getWeekViewHeader(_a) {
+    var viewDate = _a.viewDate, weekStartsOn = _a.weekStartsOn, _b = _a.excluded, excluded = _b === void 0 ? [] : _b, _c = _a.weekViewDays, weekViewDays = _c === void 0 ? DAYS_IN_WEEK : _c;
     var start = __WEBPACK_IMPORTED_MODULE_6_date_fns_start_of_week___default()(viewDate, { weekStartsOn: weekStartsOn });
     var days = [];
     var _loop_1 = function (i) {
@@ -601,19 +603,22 @@ var getWeekViewHeader = function (_a) {
             days.push(getWeekDay({ date: date }));
         }
     };
-    for (var i = 0; i < DAYS_IN_WEEK; i++) {
+    for (var i = 0; i < weekViewDays; i++) {
         _loop_1(i);
     }
     return days;
-};
-var getWeekView = function (_a) {
-    var _b = _a.events, events = _b === void 0 ? [] : _b, viewDate = _a.viewDate, weekStartsOn = _a.weekStartsOn, _c = _a.excluded, excluded = _c === void 0 ? [] : _c;
+}
+function getWeekView(_a) {
+    var _b = _a.events, events = _b === void 0 ? [] : _b, viewDate = _a.viewDate, weekStartsOn = _a.weekStartsOn, _c = _a.excluded, excluded = _c === void 0 ? [] : _c, _d = _a.weekViewDays, weekViewDays = _d === void 0 ? DAYS_IN_WEEK : _d;
+    if (!events) {
+        events = [];
+    }
     var startOfViewWeek = __WEBPACK_IMPORTED_MODULE_6_date_fns_start_of_week___default()(viewDate, { weekStartsOn: weekStartsOn });
     var endOfViewWeek = __WEBPACK_IMPORTED_MODULE_8_date_fns_end_of_week___default()(viewDate, { weekStartsOn: weekStartsOn });
-    var maxRange = DAYS_IN_WEEK - excluded.length;
+    var maxRange = weekViewDays - excluded.length;
     var eventsMapped = getEventsInPeriod({ events: events, periodStart: startOfViewWeek, periodEnd: endOfViewWeek }).map(function (event) {
-        var offset = getWeekViewEventOffset(event, startOfViewWeek, excluded);
-        var span = getWeekViewEventSpan(event, offset, startOfViewWeek, excluded);
+        var offset = getWeekViewEventOffset({ event: event, startOfWeek: startOfViewWeek, excluded: excluded });
+        var span = getWeekViewEventSpan({ event: event, offset: offset, startOfWeek: startOfViewWeek, excluded: excluded });
         return { event: event, offset: offset, span: span };
     }).filter(function (e) { return e.offset < maxRange; }).filter(function (e) { return e.span > 0; }).map(function (entry) { return ({
         event: entry.event,
@@ -636,7 +641,7 @@ var getWeekView = function (_a) {
             var rowSpan_1 = event.span + event.offset;
             var otherRowEvents = eventsMapped.slice(index + 1).filter(function (nextEvent) {
                 if (nextEvent.offset >= rowSpan_1 &&
-                    rowSpan_1 + nextEvent.span <= DAYS_IN_WEEK &&
+                    rowSpan_1 + nextEvent.span <= weekViewDays &&
                     allocatedEvents.indexOf(nextEvent) === -1) {
                     nextEvent.offset -= rowSpan_1;
                     rowSpan_1 += nextEvent.span + nextEvent.offset;
@@ -652,9 +657,12 @@ var getWeekView = function (_a) {
         }
     });
     return eventRows;
-};
-var getMonthView = function (_a) {
+}
+function getMonthView(_a) {
     var _b = _a.events, events = _b === void 0 ? [] : _b, viewDate = _a.viewDate, weekStartsOn = _a.weekStartsOn, _c = _a.excluded, excluded = _c === void 0 ? [] : _c;
+    if (!events) {
+        events = [];
+    }
     var start = __WEBPACK_IMPORTED_MODULE_6_date_fns_start_of_week___default()(__WEBPACK_IMPORTED_MODULE_10_date_fns_start_of_month___default()(viewDate), { weekStartsOn: weekStartsOn });
     var end = __WEBPACK_IMPORTED_MODULE_8_date_fns_end_of_week___default()(__WEBPACK_IMPORTED_MODULE_11_date_fns_end_of_month___default()(viewDate), { weekStartsOn: weekStartsOn });
     var eventsInMonth = getEventsInPeriod({
@@ -692,9 +700,12 @@ var getMonthView = function (_a) {
         totalDaysVisibleInWeek: totalDaysVisibleInWeek,
         days: days
     };
-};
-var getDayView = function (_a) {
+}
+function getDayView(_a) {
     var _b = _a.events, events = _b === void 0 ? [] : _b, viewDate = _a.viewDate, hourSegments = _a.hourSegments, dayStart = _a.dayStart, dayEnd = _a.dayEnd, eventWidth = _a.eventWidth, segmentHeight = _a.segmentHeight;
+    if (!events) {
+        events = [];
+    }
     var startOfView = __WEBPACK_IMPORTED_MODULE_15_date_fns_set_minutes___default()(__WEBPACK_IMPORTED_MODULE_14_date_fns_set_hours___default()(__WEBPACK_IMPORTED_MODULE_3_date_fns_start_of_day___default()(viewDate), dayStart.hour), dayStart.minute);
     var endOfView = __WEBPACK_IMPORTED_MODULE_15_date_fns_set_minutes___default()(__WEBPACK_IMPORTED_MODULE_14_date_fns_set_hours___default()(__WEBPACK_IMPORTED_MODULE_16_date_fns_start_of_minute___default()(__WEBPACK_IMPORTED_MODULE_0_date_fns_end_of_day___default()(viewDate)), dayEnd.hour), dayEnd.minute);
     var previousDayEvents = [];
@@ -765,8 +776,8 @@ var getDayView = function (_a) {
         width: width,
         allDayEvents: allDayEvents
     };
-};
-var getDayViewHourGrid = function (_a) {
+}
+function getDayViewHourGrid(_a) {
     var viewDate = _a.viewDate, hourSegments = _a.hourSegments, dayStart = _a.dayStart, dayEnd = _a.dayEnd;
     var hours = [];
     var startOfView = __WEBPACK_IMPORTED_MODULE_15_date_fns_set_minutes___default()(__WEBPACK_IMPORTED_MODULE_14_date_fns_set_hours___default()(__WEBPACK_IMPORTED_MODULE_3_date_fns_start_of_day___default()(viewDate), dayStart.hour), dayStart.minute);
@@ -789,11 +800,42 @@ var getDayViewHourGrid = function (_a) {
         }
     }
     return hours;
-};
+}
 //# sourceMappingURL=calendarUtils.js.map
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var parse = __webpack_require__(1)
+
+/**
+ * @category Millisecond Helpers
+ * @summary Add the specified number of milliseconds to the given date.
+ *
+ * @description
+ * Add the specified number of milliseconds to the given date.
+ *
+ * @param {Date|String|Number} date - the date to be changed
+ * @param {Number} amount - the amount of milliseconds to be added
+ * @returns {Date} the new date with the milliseconds added
+ *
+ * @example
+ * // Add 750 milliseconds to 10 July 2014 12:45:30.000:
+ * var result = addMilliseconds(new Date(2014, 6, 10, 12, 45, 30, 0), 750)
+ * //=> Thu Jul 10 2014 12:45:30.750
+ */
+function addMilliseconds (dirtyDate, dirtyAmount) {
+  var timestamp = parse(dirtyDate).getTime()
+  var amount = Number(dirtyAmount)
+  return new Date(timestamp + amount)
+}
+
+module.exports = addMilliseconds
+
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var parse = __webpack_require__(1)
@@ -828,58 +870,31 @@ module.exports = differenceInMilliseconds
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"./mwlCalendar.js": 31,
-	"./mwlCalendarDay.js": 32,
-	"./mwlCalendarHourList.js": 33,
-	"./mwlCalendarMonth.js": 34,
-	"./mwlCalendarSlideBox.js": 35,
-	"./mwlCalendarWeek.js": 36,
-	"./mwlCalendarYear.js": 37,
-	"./mwlCollapseFallback.js": 38,
-	"./mwlDateModifier.js": 39,
-	"./mwlDragSelect.js": 40,
-	"./mwlDraggable.js": 41,
-	"./mwlDroppable.js": 42,
-	"./mwlDynamicDirectiveTemplate.js": 43,
-	"./mwlElementDimensions.js": 44,
-	"./mwlResizable.js": 45
-};
-function webpackContext(req) {
-	return __webpack_require__(webpackContextResolve(req));
-};
-function webpackContextResolve(req) {
-	var id = map[req];
-	if(!(id + 1)) // check for number
-		throw new Error("Cannot find module '" + req + "'.");
-	return id;
-};
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = 6;
-
 
 /***/ }),
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./calendarDate.js": 46,
-	"./calendarLimitTo.js": 47,
-	"./calendarTruncateEventTitle.js": 48,
-	"./calendarTrustAsHtml.js": 49
+	"./mwlCalendar.js": 32,
+	"./mwlCalendarDay.js": 33,
+	"./mwlCalendarHourList.js": 34,
+	"./mwlCalendarMonth.js": 35,
+	"./mwlCalendarSlideBox.js": 36,
+	"./mwlCalendarWeek.js": 37,
+	"./mwlCalendarYear.js": 38,
+	"./mwlCollapseFallback.js": 39,
+	"./mwlDateModifier.js": 40,
+	"./mwlDragSelect.js": 41,
+	"./mwlDraggable.js": 42,
+	"./mwlDroppable.js": 43,
+	"./mwlDynamicDirectiveTemplate.js": 44,
+	"./mwlElementDimensions.js": 45,
+	"./mwlResizable.js": 46
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -903,12 +918,10 @@ webpackContext.id = 7;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./calendarConfig.js": 50,
-	"./calendarEventTitle.js": 51,
-	"./calendarHelper.js": 52,
-	"./calendarTitle.js": 53,
-	"./interact.js": 54,
-	"./moment.js": 55
+	"./calendarDate.js": 47,
+	"./calendarLimitTo.js": 48,
+	"./calendarTruncateEventTitle.js": 49,
+	"./calendarTrustAsHtml.js": 50
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -929,6 +942,35 @@ webpackContext.id = 8;
 
 /***/ }),
 /* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./calendarConfig.js": 51,
+	"./calendarEventTitle.js": 52,
+	"./calendarHelper.js": 53,
+	"./calendarTitle.js": 54,
+	"./interact.js": 55,
+	"./moment.js": 56
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 9;
+
+
+/***/ }),
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var parse = __webpack_require__(1)
@@ -960,10 +1002,12 @@ module.exports = addDays
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(1)
+var addMilliseconds = __webpack_require__(4)
+
+var MILLISECONDS_IN_HOUR = 3600000
 
 /**
  * @category Hour Helpers
@@ -982,20 +1026,20 @@ var parse = __webpack_require__(1)
  * //=> Fri Jul 11 2014 01:00:00
  */
 function addHours (dirtyDate, dirtyAmount) {
-  var date = parse(dirtyDate)
   var amount = Number(dirtyAmount)
-  date.setHours(date.getHours() + amount)
-  return date
+  return addMilliseconds(dirtyDate, amount * MILLISECONDS_IN_HOUR)
 }
 
 module.exports = addHours
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(1)
+var addMilliseconds = __webpack_require__(4)
+
+var MILLISECONDS_IN_MINUTE = 60000
 
 /**
  * @category Minute Helpers
@@ -1014,17 +1058,15 @@ var parse = __webpack_require__(1)
  * //=> Thu Jul 10 2014 12:30:00
  */
 function addMinutes (dirtyDate, dirtyAmount) {
-  var date = parse(dirtyDate)
   var amount = Number(dirtyAmount)
-  date.setMinutes(date.getMinutes() + amount)
-  return date
+  return addMilliseconds(dirtyDate, amount * MILLISECONDS_IN_MINUTE)
 }
 
 module.exports = addMinutes
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var parse = __webpack_require__(1)
@@ -1081,7 +1123,7 @@ module.exports = compareAsc
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var startOfDay = __webpack_require__(2)
@@ -1128,12 +1170,12 @@ module.exports = differenceInCalendarDays
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var parse = __webpack_require__(1)
-var differenceInCalendarDays = __webpack_require__(13)
-var compareAsc = __webpack_require__(12)
+var differenceInCalendarDays = __webpack_require__(14)
+var compareAsc = __webpack_require__(13)
 
 /**
  * @category Day Helpers
@@ -1173,10 +1215,10 @@ module.exports = differenceInDays
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var differenceInMilliseconds = __webpack_require__(4)
+var differenceInMilliseconds = __webpack_require__(5)
 
 var MILLISECONDS_IN_MINUTE = 60000
 
@@ -1208,10 +1250,10 @@ module.exports = differenceInMinutes
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var differenceInMilliseconds = __webpack_require__(4)
+var differenceInMilliseconds = __webpack_require__(5)
 
 /**
  * @category Second Helpers
@@ -1242,7 +1284,7 @@ module.exports = differenceInSeconds
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var parse = __webpack_require__(1)
@@ -1273,7 +1315,7 @@ module.exports = endOfDay
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var parse = __webpack_require__(1)
@@ -1306,7 +1348,7 @@ module.exports = endOfMonth
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var parse = __webpack_require__(1)
@@ -1350,7 +1392,7 @@ module.exports = endOfWeek
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var parse = __webpack_require__(1)
@@ -1380,7 +1422,7 @@ module.exports = getDay
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports) {
 
 /**
@@ -1406,7 +1448,7 @@ module.exports = isDate
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var startOfDay = __webpack_require__(2)
@@ -1441,7 +1483,7 @@ module.exports = isSameDay
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var parse = __webpack_require__(1)
@@ -1476,10 +1518,10 @@ module.exports = isSameMonth
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var startOfSecond = __webpack_require__(29)
+var startOfSecond = __webpack_require__(30)
 
 /**
  * @category Second Helpers
@@ -1512,7 +1554,7 @@ module.exports = isSameSecond
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var parse = __webpack_require__(1)
@@ -1544,7 +1586,7 @@ module.exports = setHours
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var parse = __webpack_require__(1)
@@ -1576,7 +1618,7 @@ module.exports = setMinutes
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var parse = __webpack_require__(1)
@@ -1607,7 +1649,7 @@ module.exports = startOfMinute
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var parse = __webpack_require__(1)
@@ -1639,7 +1681,7 @@ module.exports = startOfMonth
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var parse = __webpack_require__(1)
@@ -1670,7 +1712,7 @@ module.exports = startOfSecond
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var parse = __webpack_require__(1)
@@ -1714,7 +1756,7 @@ module.exports = startOfWeek
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1758,6 +1800,7 @@ angular
       }
 
       vm.events = vm.events || [];
+      vm.weekViewDays = vm.weekViewDays || 7;
 
       var previousDate = moment(vm.viewDate);
       var previousView = vm.view;
@@ -1793,10 +1836,11 @@ angular
         //if on-timespan-click="calendarDay = calendarDate" is set then don't update the view as nothing needs to change
         var currentDate = moment(vm.viewDate);
         var shouldUpdate = true;
-        if (
-          previousDate.clone().startOf(vm.view).isSame(currentDate.clone().startOf(vm.view)) &&
-          !previousDate.isSame(currentDate) &&
-          vm.view === previousView
+        if (!previousDate.isSame(currentDate) && vm.view === previousView &&
+             ((vm.view !== 'week' || vm.view !== 'weeks') && previousDate.clone().startOf(vm.view).isSame(currentDate.clone().startOf(vm.view)) &&
+              (vm.view === 'week' || vm.view === 'weeks') &&
+              calendarHelper.getStartOfWeek(previousDate.clone(), vm.weekViewDays).isSame(calendarHelper.getStartOfWeek(currentDate.clone(), vm.weekViewDays))
+             )
         ) {
           shouldUpdate = false;
         }
@@ -1821,6 +1865,7 @@ angular
           'vm.viewDate',
           'vm.view',
           'vm.cellIsOpen',
+          'vm.weekViewDays',
           function() {
             return moment.locale() + $locale.id; //Auto update the calendar when the locale changes
           }
@@ -1871,6 +1916,7 @@ angular
         dayViewEventChunkSize: '@',
         dayViewEventWidth: '@',
         templateScope: '=?',
+        weekViewDays: '=?',
         dayViewTimePosition: '@'
       },
       controller: 'MwlCalendarCtrl as vm',
@@ -1881,7 +1927,7 @@ angular
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2007,7 +2053,7 @@ angular
 
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2157,7 +2203,7 @@ angular
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2353,7 +2399,7 @@ angular
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2405,7 +2451,7 @@ angular
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2424,6 +2470,7 @@ angular
 
     $scope.$on('calendar.refreshView', function() {
       vm.dayViewSplit = vm.dayViewSplit || 30;
+      vm.weekViewDays = vm.weekViewDays || 7;
       vm.dayViewHeight = calendarHelper.getDayViewHeight(
         vm.dayViewStart,
         vm.dayViewEnd,
@@ -2435,10 +2482,11 @@ angular
           vm.viewDate,
           vm.dayViewStart,
           vm.dayViewEnd,
-          vm.dayViewSplit
+          vm.dayViewSplit,
+          vm.weekViewDays
         );
       } else {
-        vm.view = calendarHelper.getWeekView(vm.events, vm.viewDate);
+        vm.view = calendarHelper.getWeekView(vm.events, vm.viewDate, vm.weekViewDays);
       }
     });
 
@@ -2510,6 +2558,7 @@ angular
         onDateRangeSelect: '=',
         customTemplateUrls: '=?',
         cellModifier: '=',
+        weekViewDays: '=?',
         templateScope: '='
       },
       controller: 'MwlCalendarWeekCtrl as vm',
@@ -2523,7 +2572,7 @@ angular
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2657,7 +2706,7 @@ angular
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2693,7 +2742,7 @@ angular
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2711,9 +2760,17 @@ angular
       if (angular.isDefined($attrs.setToToday)) {
         vm.date = new Date();
       } else if (angular.isDefined($attrs.increment)) {
-        vm.date = moment(vm.date).add(1, vm.increment).toDate();
+        if ((vm.increment === 'weeks' || vm.increment === 'week') && angular.isDefined($attrs.weekViewDays)) {
+          vm.date = moment(vm.date).add(vm.weekViewDays, 'days').toDate();
+        } else {
+          vm.date = moment(vm.date).add(1, vm.increment).toDate();
+        }
       } else if (angular.isDefined($attrs.decrement)) {
-        vm.date = moment(vm.date).subtract(1, vm.decrement).toDate();
+        if ((vm.decrement === 'weeks' || vm.decrement === 'week') && angular.isDefined($attrs.weekViewDays)) {
+          vm.date = moment(vm.date).subtract(vm.weekViewDays, 'days').toDate();
+        } else {
+          vm.date = moment(vm.date).subtract(1, vm.decrement).toDate();
+        }
       }
       $scope.$apply();
     }
@@ -2733,7 +2790,8 @@ angular
       scope: {
         date: '=',
         increment: '=',
-        decrement: '='
+        decrement: '=',
+        weekViewDays: '=?'
       },
       bindToController: true
     };
@@ -2742,7 +2800,7 @@ angular
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2804,7 +2862,7 @@ angular
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2926,7 +2984,7 @@ angular
 
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2978,7 +3036,7 @@ angular
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3025,7 +3083,7 @@ angular
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3067,7 +3125,7 @@ angular
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3202,7 +3260,7 @@ angular
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3234,7 +3292,7 @@ angular
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3284,7 +3342,7 @@ angular
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3313,7 +3371,7 @@ angular
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3333,7 +3391,7 @@ angular
 
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3421,7 +3479,7 @@ angular
 
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3475,7 +3533,7 @@ angular
 
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3658,11 +3716,24 @@ angular
 
     }
 
-    function getWeekView(events, viewDate) {
+    function getStartOfWeek(viewDate, weekViewDays) {
+      if (weekViewDays === 7) {
+        return moment(viewDate).startOf('week');
+      }
+      var modulus = moment(viewDate).dayOfYear() % weekViewDays;
+      return moment(viewDate).subtract(modulus, 'days').startOf('day');
+    }
 
+    function getWeekView(events, viewDate, weekViewDays) {
+      weekViewDays = weekViewDays || 7;
+      var startOfWeek = getStartOfWeek(viewDate, weekViewDays);
+      var endOfWeek = moment(startOfWeek).add(weekViewDays - 1, 'days').endOf('day');
+
+      var weekStartsOn = startOfWeek.day();
       var days = calendarUtils.getWeekViewHeader({
         viewDate: viewDate,
-        weekStartsOn: moment().startOf('week').day()
+        weekStartsOn: weekStartsOn,
+        weekViewDays: weekViewDays
       }).map(function(day) {
         day.date = moment(day.date);
         day.weekDayLabel = formatDate(day.date, calendarConfig.dateFormats.weekDay);
@@ -3670,12 +3741,10 @@ angular
         return day;
       });
 
-      var startOfWeek = moment(viewDate).startOf('week');
-      var endOfWeek = moment(viewDate).endOf('week');
-
       var eventRows = calendarUtils.getWeekView({
         viewDate: viewDate,
-        weekStartsOn: moment().startOf('week').day(),
+        weekStartsOn: weekStartsOn,
+        weekViewDays: weekViewDays,
         events: filterEventsInPeriod(events, startOfWeek, endOfWeek).map(function(event) {
 
           var weekViewStart = moment(startOfWeek).startOf('day');
@@ -3748,8 +3817,8 @@ angular
 
     }
 
-    function getWeekViewWithTimes(events, viewDate, dayViewStart, dayViewEnd, dayViewSplit) {
-      var weekView = getWeekView(events, viewDate);
+    function getWeekViewWithTimes(events, viewDate, dayViewStart, dayViewEnd, dayViewSplit, weekViewDays) {
+      var weekView = getWeekView(events, viewDate, weekViewDays);
       var newEvents = [];
       var flattenedEvents = [];
       weekView.eventRows.forEach(function(row) {
@@ -3776,10 +3845,13 @@ angular
           return {
             event: event,
             top: dayEvent.top,
-            offset: calendarUtils.getWeekViewEventOffset(
-              {start: event.startsAt, end: event.endsAt},
-              moment(viewDate).startOf('week')
-            )
+            offset: calendarUtils.getWeekViewEventOffset({
+              event: {
+                start: event.startsAt,
+                end: event.endsAt
+              },
+              startOfWeek: getStartOfWeek(viewDate, weekViewDays).toDate()
+            })
           };
         })
       }];
@@ -3805,6 +3877,7 @@ angular
     }
 
     return {
+      getStartOfWeek: getStartOfWeek,
       getWeekDayNames: getWeekDayNames,
       getYearView: getYearView,
       getMonthView: getMonthView,
@@ -3822,7 +3895,7 @@ angular
 
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3863,7 +3936,7 @@ angular
 
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3872,7 +3945,7 @@ angular
 var angular = __webpack_require__(0);
 var interact;
 try {
-  interact = __webpack_require__(57);
+  interact = __webpack_require__(58);
 } catch (e) {
   /* istanbul ignore next */
   interact = null;
@@ -3884,14 +3957,14 @@ angular
 
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var angular = __webpack_require__(0);
-var moment = __webpack_require__(56);
+var moment = __webpack_require__(57);
 
 angular
   .module('mwl.calendar')
@@ -3899,26 +3972,26 @@ angular
 
 
 /***/ }),
-/* 56 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_56__;
-
-/***/ }),
 /* 57 */
 /***/ (function(module, exports) {
 
-if(typeof __WEBPACK_EXTERNAL_MODULE_57__ === 'undefined') {var e = new Error("Cannot find module \"undefined\""); e.code = 'MODULE_NOT_FOUND';; throw e;}
 module.exports = __WEBPACK_EXTERNAL_MODULE_57__;
 
 /***/ }),
 /* 58 */
+/***/ (function(module, exports) {
+
+if(typeof __WEBPACK_EXTERNAL_MODULE_58__ === 'undefined') {var e = new Error("Cannot find module \"undefined\""); e.code = 'MODULE_NOT_FOUND';; throw e;}
+module.exports = __WEBPACK_EXTERNAL_MODULE_58__;
+
+/***/ }),
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(5);
+__webpack_require__(6);
 
 var angular = __webpack_require__(0);
 
@@ -3966,9 +4039,9 @@ module.exports = angular
 
   }]).name;
 
-requireAll(__webpack_require__(6));
 requireAll(__webpack_require__(7));
 requireAll(__webpack_require__(8));
+requireAll(__webpack_require__(9));
 
 
 /***/ })

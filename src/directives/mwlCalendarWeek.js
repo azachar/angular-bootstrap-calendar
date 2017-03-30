@@ -13,6 +13,7 @@ angular
 
     $scope.$on('calendar.refreshView', function() {
       vm.dayViewSplit = vm.dayViewSplit || 30;
+      vm.weekViewDays = vm.weekViewDays || 7;
       vm.dayViewHeight = calendarHelper.getDayViewHeight(
         vm.dayViewStart,
         vm.dayViewEnd,
@@ -24,10 +25,11 @@ angular
           vm.viewDate,
           vm.dayViewStart,
           vm.dayViewEnd,
-          vm.dayViewSplit
+          vm.dayViewSplit,
+          vm.weekViewDays
         );
       } else {
-        vm.view = calendarHelper.getWeekView(vm.events, vm.viewDate);
+        vm.view = calendarHelper.getWeekView(vm.events, vm.viewDate, vm.weekViewDays);
       }
     });
 
@@ -99,6 +101,7 @@ angular
         onDateRangeSelect: '=',
         customTemplateUrls: '=?',
         cellModifier: '=',
+        weekViewDays: '=?',
         templateScope: '='
       },
       controller: 'MwlCalendarWeekCtrl as vm',

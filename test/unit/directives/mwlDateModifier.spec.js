@@ -7,21 +7,7 @@ describe('mwlDateModifier directive', function() {
     scope,
     $rootScope,
     $compile,
-    template =
-      '<button ' +
-        'mwl-date-modifier ' +
-        'date="date" ' +
-        'set-to-today ' +
-        'increment="increment" ' +
-        'decrement="decrement" ' +
-      '></button>';
-
-  function prepareScope(vm) {
-    //These variables MUST be set as a minimum for the calendar to work
-    vm.date = new Date(2015, 0, 5);
-    vm.increment = 'days';
-    vm.decrement = 'months';
-  }
+    template;
 
   beforeEach(angular.mock.module('mwl.calendar'));
 
@@ -29,31 +15,165 @@ describe('mwlDateModifier directive', function() {
     $compile = _$compile_;
     $rootScope = _$rootScope_;
     scope = $rootScope.$new();
-    prepareScope(scope);
-
   }));
 
-  it('should increment the date by one unit of the provided attribute value', function() {
-    element = angular.element(template).removeAttr('set-to-today');
-    element = $compile(element)(scope);
-    scope.$apply();
-    element.triggerHandler('click');
-    expect(scope.date).to.eql(new Date(2015, 0, 6));
+  describe('days and months', function() {
+
+    function prepareScope(vm) {
+      //These variables MUST be set as a minimum for the calendar to work
+      vm.date = new Date(2015, 0, 5);
+      vm.increment = 'days';
+      vm.decrement = 'months';
+    }
+
+    beforeEach(function() {
+      template =
+      '<button ' +
+      'mwl-date-modifier ' +
+      'date="date" ' +
+      'set-to-today ' +
+      'increment="increment" ' +
+      'decrement="decrement" ' +
+      '></button>';
+      prepareScope(scope);
+    });
+
+    it('should increment the date by one unit of the provided attribute value', function() {
+      element = angular.element(template).removeAttr('set-to-today');
+      element = $compile(element)(scope);
+      scope.$apply();
+      element.triggerHandler('click');
+      expect(scope.date).to.eql(new Date(2015, 0, 6));
+    });
+
+    it('should decrement the date by one unit of the provided attribute value', function() {
+      element = angular.element(template).removeAttr('set-to-today').removeAttr('increment');
+      element = $compile(element)(scope);
+      scope.$apply();
+      element.triggerHandler('click');
+      expect(scope.date).to.eql(new Date(2014, 11, 5));
+    });
+
+    it('should set the date to today', function() {
+      element = $compile(template)(scope);
+      scope.$apply();
+      element.triggerHandler('click');
+      expect(scope.date.toString()).to.equal((new Date()).toString());
+    });
   });
 
-  it('should decrement the date by one unit of the provided attribute value', function() {
-    element = angular.element(template).removeAttr('set-to-today').removeAttr('increment');
-    element = $compile(element)(scope);
-    scope.$apply();
-    element.triggerHandler('click');
-    expect(scope.date).to.eql(new Date(2014, 11, 5));
-  });
+  describe('weeks', function() {
 
-  it('should set the date to today', function() {
-    element = $compile(template)(scope);
-    scope.$apply();
-    element.triggerHandler('click');
-    expect(scope.date.toString()).to.equal((new Date()).toString());
-  });
+    function prepareScope(vm) {
+      //These variables MUST be set as a minimum for the calendar to work
+      vm.date = new Date(2015, 0, 5);
+      vm.increment = 'week';
+      vm.decrement = 'weeks';
+    }
 
+    describe('custom 7 days', function() {
+      beforeEach(function() {
+        prepareScope(scope);
+        template =
+        '<button ' +
+        'mwl-date-modifier ' +
+        'date="date" ' +
+        'set-to-today ' +
+        'increment="increment" ' +
+        'decrement="decrement" ' +
+        'week-view-days="7" ' +
+        '></button>';
+      });
+
+      it('should increment the date by one unit of the provided attribute value', function() {
+        element = angular.element(template).removeAttr('set-to-today');
+        element = $compile(element)(scope);
+        scope.$apply();
+        element.triggerHandler('click');
+        expect(scope.date).to.eql(new Date(2015, 0, 12));
+      });
+
+      it('should decrement the date by one unit of the provided attribute value', function() {
+        element = angular.element(template).removeAttr('set-to-today').removeAttr('increment');
+        element = $compile(element)(scope);
+        scope.$apply();
+        element.triggerHandler('click');
+        expect(scope.date).to.eql(new Date(2014, 11, 29));
+      });
+
+      it('should set the date to today', function() {
+        element = $compile(template)(scope);
+        scope.$apply();
+        element.triggerHandler('click');
+        expect(scope.date.toString()).to.equal((new Date()).toString());
+      });
+    });
+
+    describe('default 7 days', function() {
+      beforeEach(function() {
+        prepareScope(scope);
+      });
+
+      it('should increment the date by one unit of the provided attribute value', function() {
+        element = angular.element(template).removeAttr('set-to-today');
+        element = $compile(element)(scope);
+        scope.$apply();
+        element.triggerHandler('click');
+        expect(scope.date).to.eql(new Date(2015, 0, 12));
+      });
+
+      it('should decrement the date by one unit of the provided attribute value', function() {
+        element = angular.element(template).removeAttr('set-to-today').removeAttr('increment');
+        element = $compile(element)(scope);
+        scope.$apply();
+        element.triggerHandler('click');
+        expect(scope.date).to.eql(new Date(2014, 11, 29));
+      });
+
+      it('should set the date to today', function() {
+        element = $compile(template)(scope);
+        scope.$apply();
+        element.triggerHandler('click');
+        expect(scope.date.toString()).to.equal((new Date()).toString());
+      });
+    });
+
+    describe('5 days', function() {
+      beforeEach(function() {
+        prepareScope(scope);
+        template =
+        '<button ' +
+        'mwl-date-modifier ' +
+        'date="date" ' +
+        'set-to-today ' +
+        'increment="increment" ' +
+        'decrement="decrement" ' +
+        'week-view-days="5" ' +
+        '></button>';
+      });
+
+      it('should increment the date by one unit of the provided attribute value', function() {
+        element = angular.element(template).removeAttr('set-to-today');
+        element = $compile(element)(scope);
+        scope.$apply();
+        element.triggerHandler('click');
+        expect(scope.date).to.eql(new Date(2015, 0, 10));
+      });
+
+      it('should decrement the date by one unit of the provided attribute value', function() {
+        element = angular.element(template).removeAttr('set-to-today').removeAttr('increment');
+        element = $compile(element)(scope);
+        scope.$apply();
+        element.triggerHandler('click');
+        expect(scope.date).to.eql(new Date(2014, 11, 31));
+      });
+
+      it('should set the date to today', function() {
+        element = $compile(template)(scope);
+        scope.$apply();
+        element.triggerHandler('click');
+        expect(scope.date.toString()).to.equal((new Date()).toString());
+      });
+    });
+  });
 });
